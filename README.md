@@ -10,7 +10,7 @@
 -> Minification 
 -> Bundling
 -> Compress
--> Consistent Hashing
+-> content Hashing
 -> Code Spliting
 -> Diffrential Bundling - support older browser
 -> Diagnostic
