@@ -1,5 +1,4 @@
 
-
 # parcel->
 -> Dev Build
 -> Local Server
@@ -17,3 +16,8 @@
 -> Error Handling
 -> Tree Shaking
 -> Diffrent Dev and Production Bundles
+
+
+Two types of export/import
+-> default Export/Import
+-> named Export/Import
