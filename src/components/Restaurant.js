@@ -4,7 +4,7 @@ const Restaurant = (props) => {
     const {resData} = props
     
     const {cloudinaryImageId,name,avgRating,cuisines,deliveryTime} = resData?.data
-      console.log(resData);//Object
+     // console.log(resData);//Object
       return (
         <div>
           <div className="res-card">
