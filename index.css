@@ -53,3 +53,14 @@ p{
     cursor: pointer;
     margin: 10px;
 }
+.login{
+   height: 50%;
+   width: 50%;
+   margin-top: 28px;
+}
+
+.login:hover{
+    background-color: blue;
+    border: 2px solid black;
+    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+}

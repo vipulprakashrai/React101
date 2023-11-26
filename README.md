@@ -23,5 +23,6 @@ Two types of export/import
 -> named Export/Import
 
 # React Hooks
-
+ -> useState
+ -> useEffect
 
