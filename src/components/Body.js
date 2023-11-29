@@ -10,7 +10,7 @@ const Body = () => {
 const [RestaurantList, setRestaurantList] = useState([]);
 console.log(RestaurantList);
 const[filteredRestaurant, setfilteredRestaurant] = useState([]);
-
+console.log(filteredRestaurant);
 const [searchText, setsearchText] = useState("");
 
   useEffect(() => {
@@ -50,7 +50,7 @@ function handlechange(e){
        onClick={()=>{
         // filter logic
        let filteredList = RestaurantList.filter((item) => item.info.avgRating > 4)
-       setRestaurantList(filteredList);
+       setfilteredRestaurant(filteredList);
        
        }}>
         Filter Top Restaurant

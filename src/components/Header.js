@@ -17,6 +17,7 @@ console.log("header rendered");
         <div id="item">
           <h1>Home</h1>
           <h1>About</h1>
+          <h1>ContactUs</h1>
           <h1>Cart</h1>
           <button className="login"
               onClick={() =>{
