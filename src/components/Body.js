@@ -8,9 +8,9 @@ import { useEffect, useState } from "react";
 const Body = () => {
 // local state variable
 const [RestaurantList, setRestaurantList] = useState([]);
-console.log(RestaurantList);
+
 const[filteredRestaurant, setfilteredRestaurant] = useState([]);
-console.log(filteredRestaurant);
+
 const [searchText, setsearchText] = useState("");
 
   useEffect(() => {
@@ -40,7 +40,7 @@ function handlechange(e){
         <button onClick={() =>{
           // on search click filter the searched restaurant
           let filterRes = RestaurantList.filter((item) => item.info.name.toLowerCase().includes(searchText.toLowerCase()))
-          console.log(filterRes);
+          
           setfilteredRestaurant(filterRes)
           //console.log("btn clcked");
         }}>search</button>

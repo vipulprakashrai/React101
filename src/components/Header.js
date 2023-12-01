@@ -1,5 +1,5 @@
 import {LOGO_URL} from "../utils/constants.js";
-
+import { Link } from "react-router-dom";
 import { useState } from "react";
 
 const Header = () => {
@@ -15,9 +15,9 @@ console.log("header rendered");
           />
         </div>
         <div id="item">
-          <h1>Home</h1>
-          <h1>About</h1>
-          <h1>ContactUs</h1>
+          <h1><Link to={`/`}>Home</Link></h1>
+          <h1><Link to="/about">About</Link></h1>
+          <h1><Link to={`/contact`}>ContactUs</Link></h1>
           <h1>Cart</h1>
           <button className="login"
               onClick={() =>{

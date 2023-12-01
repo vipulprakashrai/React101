@@ -7,12 +7,15 @@
     border: 2px solid black;
 }
 
+
+
 #item{
     display: flex;
     justify-content: space-between;
     size: 50px;
     padding-right: 15px;
     gap: 100px;
+    text-decoration: none;
 }
 img{
     width: 100px;

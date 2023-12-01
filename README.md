@@ -26,3 +26,7 @@ Two types of export/import
  -> useState
  -> useEffect
 
+
+# There are two types of routing in web apps
+-> client side routing
+-> Server side routing
