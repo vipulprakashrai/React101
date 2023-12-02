@@ -13,8 +13,8 @@ import RestaurantMenu from "./components/RestaurantMenu.js";
 const App = () => {
   return (
     <>
-      <Header />
-     <Outlet/>
+    <Header />
+    <Outlet/>
     </>
   );
 };
@@ -46,8 +46,6 @@ const route = createBrowserRouter([
   },
  
 ]);
-
-
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(<RouterProvider router={route}/>);

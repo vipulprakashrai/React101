@@ -1,7 +1,7 @@
 import Restaurant from "./Restaurant.js";
 
 import { useEffect, useState } from "react";
-
+import { Link } from "react-router-dom";
 //import resList from "../utils/mockData.js";
 
 
@@ -59,12 +59,13 @@ function handlechange(e){
       { 
       // map method returns the entire new array whereas forEach Method 
       // does not returns a new array based on the given array.
-      filteredRestaurant.map((obj) => <Restaurant key ={obj.info.id} resData={obj}/>)
-      }
+
+    filteredRestaurant.map((obj) => (
+    <Link key ={obj.info.id} to={"/restaurant/"+obj.info.id}><Restaurant  resData={obj}/></Link>)
+    )}
       </div>
     </div>
   );
 };
-
 
 export default Body;  
