@@ -1,7 +1,7 @@
 import {useEffect, useState} from "react";
 
 import {useParams} from "react-router-dom";
-
+import Submenu from "./Submenu.js"
 
 const RestaurantMenu = () => {
 
@@ -26,8 +26,13 @@ if(resMenu === null){
 }
 
 
-const {itemCards} = resMenu?.data?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards[2]?.card?.card;
-console.log(itemCards);
+const {itemCards} = resMenu?.data?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards[2]?.card?.card
+ || resMenu?.data?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards[1]?.card?.card;
+
+ const {categories} = resMenu?.data?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards[2]?.card?.card
+ || resMenu?.data?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards[1]?.card?.card;
+
+
 return(
         <div className="menu-items">
             <h1>{resMenu?.data?.cards[0]?.card?.card?.info?.name}</h1>
@@ -35,9 +40,13 @@ return(
             <p>{resMenu?.data?.cards[0]?.card?.card?.info?.cuisines.toString()}</p>
             <h3>Recommended</h3>
             <ul>
-             { itemCards.map((item) => <li key={item?.card?.info?.id}>{item?.card?.info?.name}</li>)} 
+             { itemCards && itemCards.map((item) => <li key={item?.card?.info?.id}>{item?.card?.info?.name}</li>)} 
             </ul>
-            
+            <div>
+             {categories && categories.map((data) => (
+              <Submenu data={data.itemCards} title ={data.title}/>
+             ))}
+            </div>
         </div>
       )
 }
