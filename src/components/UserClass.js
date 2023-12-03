@@ -2,21 +2,33 @@ import React from "react";
 class UserClass extends React.Component{
     constructor(props){
        super(props);
-       console.log(props);
-
        this.state = {
-         count: 0,
-         count2: 2,
+          userdata:{
+            name: "",
+            location: "",
+            avatar_url:"",
+        }
        }
     }
+    
+   async componentDidMount(){
+        // API call
+        const data = await fetch("https://api.github.com/users/vipulprakashrai");
+        const jsonData = await data.json();
+        console.log(jsonData);
+         
+       this.setState({
+          userdata: jsonData
+       }); 
+    }
+
     render(){
-       const{location} = this.props;
-       const {count2} = this.state;
+       const{name,location,avatar_url} = this.state.userdata;
+       
         return(
             <div className="user">
-                <p>Count - {this.state.count}</p>
-                <p>Count2 - {count2}</p>
-              <h2>Name: {this.props.name}</h2>
+              <img src={avatar_url}/>
+              <h2>Name: {name}</h2>
               <h2>Location: {location}</h2>
               <h2>Contact: @vips</h2>
             </div>
