@@ -38,7 +38,7 @@ return(
             <h1>{resMenu?.data?.cards[0]?.card?.card?.info?.name}</h1>
             <p>{resMenu?.data?.cards[0]?.card?.card?.info?.avgRating} *</p>
             <p>{resMenu?.data?.cards[0]?.card?.card?.info?.cuisines.toString()}</p>
-            <h3>Recommended</h3>
+           
             <ul>
              { itemCards && itemCards.map((item) => <li key={item?.card?.info?.id}>{item?.card?.info?.name}</li>)} 
             </ul>
