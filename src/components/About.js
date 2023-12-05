@@ -9,7 +9,7 @@ class About extends Component{
     }
 
   componentDidMount(){
-    console.log("componentDidMount called");
+    //console.log("componentDidMount called");
   }
 
     render(){

@@ -1,25 +1,15 @@
 import {useEffect, useState} from "react";
-
+import useRestaurantMenu from "../utils/useRestaurantMenu.js"
 import {useParams} from "react-router-dom";
-import Submenu from "./Submenu.js"
+import Submenu from "./Submenu.js";
+
 
 const RestaurantMenu = () => {
 
-  const [resMenu, setresMenu]= useState(null);
-
   const {resId} = useParams();
+// created my own custum hook to fetch data
+  const resMenu = useRestaurantMenu(resId);
 
-   useEffect(()=>{
-      fetchMenu()
-   },
-   []);
-
-const fetchMenu = async() =>{
-  let data = await fetch("https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=28.6460176&lng=77.3695166&restaurantId="+resId+"&catalog_qa=undefined&submitAction=ENTER");
-  let jsonData = await data.json();
-  console.log(jsonData);
-  setresMenu(jsonData)
-}
 
 if(resMenu === null){
   return <p>loading data</p>

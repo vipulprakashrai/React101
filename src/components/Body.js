@@ -3,7 +3,7 @@ import Restaurant from "./Restaurant.js";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 //import resList from "../utils/mockData.js";
-
+import useOnlineStatus from "../utils/useOnlineStatus.js";
 
 const Body = () => {
 // local state variable
@@ -26,6 +26,13 @@ const [searchText, setsearchText] = useState("");
          setfilteredRestaurant(jsonData?.data?.cards[5]?.card?.card?.gridElements?.infoWithStyle?.restaurants)
   }
 
+  const internetStatus = useOnlineStatus();
+
+  if(internetStatus === false){
+   return <h3>Looks like you have loss your internet connectivity</h3>
+  }
+
+
 if(RestaurantList.length === 0){
   return <h1>Loading....</h1>
 }
@@ -33,6 +40,8 @@ if(RestaurantList.length === 0){
 function handlechange(e){
   setsearchText(e.target.value)
 }
+
+
   return (
     <div className="body">
       <div className="search">
@@ -67,5 +76,6 @@ function handlechange(e){
     </div>
   );
 };
+
 
 export default Body;  
