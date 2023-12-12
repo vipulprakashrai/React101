@@ -18,6 +18,7 @@ const [loginbtn, setloginbtn] = useState("Login");
           <h1><Link to={`/`}>Home</Link></h1>
           <h1><Link to="/about">About</Link></h1>
           <h1><Link to={`/contact`}>ContactUs</Link></h1>
+          <h1><Link to={"/grocery"}>Grocery</Link></h1>
           <h1>Cart</h1>
           <button className="login"
               onClick={() =>{
