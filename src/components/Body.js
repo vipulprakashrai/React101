@@ -44,9 +44,10 @@ function handlechange(e){
 
   return (
     <div className="body">
-      <div className="search">
-        <input type="text" className="search-box" value={searchText} onChange={handlechange}/>
-        <button onClick={() =>{
+      <div className="p-4 m-4">
+        <input type="text" className="  border border-solid border-black" value={searchText} onChange={handlechange}/>
+        <button className="m-2 p-2"
+           onClick={() =>{
           // on search click filter the searched restaurant
           let filterRes = RestaurantList.filter((item) => item.info.name.toLowerCase().includes(searchText.toLowerCase()))
           
