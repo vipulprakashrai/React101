@@ -24,7 +24,7 @@ const {itemCards} = resMenu?.data?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?
 
 console.log(resMenu?.data?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards);
 return(
-        <div className="menu-items">
+        <div className="">
             <h1>{resMenu?.data?.cards[0]?.card?.card?.info?.name}</h1>
             <p>{resMenu?.data?.cards[0]?.card?.card?.info?.avgRating} *</p>
             <p>{resMenu?.data?.cards[0]?.card?.card?.info?.cuisines.toString()}</p>

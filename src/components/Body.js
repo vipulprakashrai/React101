@@ -44,9 +44,10 @@ function handlechange(e){
 
   return (
     <div className="body">
+     <div className="flex items-center">
       <div className="p-4 m-4">
         <input type="text" className="  border border-solid border-black" value={searchText} onChange={handlechange}/>
-        <button className="m-2 p-2"
+        <button className="px-4 py-1 m-4 bg-slate-400 rounded-xl"
            onClick={() =>{
           // on search click filter the searched restaurant
           let filterRes = RestaurantList.filter((item) => item.info.name.toLowerCase().includes(searchText.toLowerCase()))
@@ -55,17 +56,19 @@ function handlechange(e){
           //console.log("btn clcked");
         }}>search</button>
       </div>
-
-      <button className="filter-btn"
-       onClick={()=>{
+      <div className="p-4 m-4">
+        <button className=" p-1.5 border border-solid rounded-full border-gray-300 "
+           onClick={()=>{
         // filter logic
        let filteredList = RestaurantList.filter((item) => item.info.avgRating > 4)
        setfilteredRestaurant(filteredList);
        
        }}>
         Filter Top Restaurant
-      </button>
-      <div className="res-cont">
+        </button>
+      </div>
+     </div>
+      <div className="flex flex-wrap justify-center gap-10">
       { 
       // map method returns the entire new array whereas forEach Method 
       // does not returns a new array based on the given array.

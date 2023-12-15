@@ -15,12 +15,12 @@ const [loginbtn, setloginbtn] = useState("Login");
           />
         </div>
         <div className="flex p-4">
-          <h1 className="px-4"><Link to={`/`}>Home</Link></h1>
-          <h1 className="px-4"><Link to="/about">About</Link></h1>
-          <h1 className="px-4"><Link to={`/contact`}>ContactUs</Link></h1>
-          <h1 className="px-4"><Link to={"/grocery"}>Grocery</Link></h1>
-          <h1 className="px-4">Cart</h1>
-          <button className="flex px-4"
+          <h1 className="px-4 hover:text-amber-600"><Link to={`/`}>Home</Link></h1>
+          <h1 className="px-4 hover:text-amber-600"><Link to="/about">About</Link></h1>
+          <h1 className="px-4 hover:text-amber-600"><Link to={`/contact`}>ContactUs</Link></h1>
+          <h1 className="px-4 hover:text-amber-600"><Link to={"/grocery"}>Grocery</Link></h1>
+          <h1 className="px-4 hover:text-amber-600">Cart</h1>
+          <button className="flex px-4 hover:text-amber-600"
               onClick={() =>{
                   if(loginbtn === "Login"){
                     setloginbtn("Logout")
