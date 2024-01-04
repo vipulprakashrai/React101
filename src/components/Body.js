@@ -8,6 +8,7 @@ import useOnlineStatus from "../utils/useOnlineStatus.js";
 const Body = () => {
 // local state variable
 const [RestaurantList, setRestaurantList] = useState([]);
+console.log(RestaurantList);
 
 const[filteredRestaurant, setfilteredRestaurant] = useState([]);
 
@@ -21,9 +22,10 @@ const [searchText, setsearchText] = useState("");
   const fetchData = async() =>{
        let data = await fetch("https://www.swiggy.com/dapi/restaurants/list/v5?lat=28.6460176&lng=77.3695166&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING");
        let jsonData = await data.json()
-         setRestaurantList(jsonData?.data?.cards[5]?.card?.card?.gridElements?.infoWithStyle?.restaurants)
+       console.log(jsonData);
+         setRestaurantList(jsonData?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants)
       
-         setfilteredRestaurant(jsonData?.data?.cards[5]?.card?.card?.gridElements?.infoWithStyle?.restaurants)
+         setfilteredRestaurant(jsonData?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants)
   }
 
   const internetStatus = useOnlineStatus();
@@ -74,7 +76,9 @@ function handlechange(e){
       // does not returns a new array based on the given array.
 
     filteredRestaurant.map((obj) => (
-    <Link key ={obj.info.id} to={"/restaurant/"+obj.info.id}><Restaurant  resData={obj}/></Link>)
+    <Link key ={obj.info.id} to={"/restaurant/" + obj.info.id}>
+      <Restaurant  resData={obj}/>
+    </Link>)
     )}
       </div>
     </div>
