@@ -30,7 +30,7 @@ console.log(categories);
 return(
         <div className="px-96" >
           <div className="flex gap-72">
-              <h1 className="font-bold">{resMenu?.data?.cards[0]?.card?.card?.info?.name}</h1>
+              <h1 className="font-bold text-xl">{resMenu?.data?.cards[0]?.card?.card?.info?.name}</h1>
              <p>{resMenu?.data?.cards[0]?.card?.card?.info?.avgRating} star</p>
           </div>
             
@@ -41,7 +41,7 @@ return(
             
            {/* categories accordian*/}
            {
-            categories.map((category)=>( <RestaurantCategory/>))
+             categories.map((category) => <RestaurantCategory data={category?.card?.card}/>)
            }
             
 
