@@ -28,17 +28,20 @@ console.log(resMenu?.data?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards);
 const categories = resMenu?.data?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards.filter((obj) => obj?.card?.card?.["@type"] === "type.googleapis.com/swiggy.presentation.food.v2.ItemCategory" );
 console.log(categories);
 return(
-        <div className="px-96" >
+      <div className="px-96 border-gray-200 border-b-2" >
+        <div className="border-gray-200 border-b-2 mt-10">
           <div className="flex gap-72">
               <h1 className="font-bold text-xl">{resMenu?.data?.cards[0]?.card?.card?.info?.name}</h1>
              <p>{resMenu?.data?.cards[0]?.card?.card?.info?.avgRating} star</p>
           </div>
-            
-          <div className="flex gap-72">
-            <p>{resMenu?.data?.cards[0]?.card?.card?.info?.cuisines.toString()}</p>
+            <div><p>{resMenu?.data?.cards[0]?.card?.card?.info?.cuisines.toString()}</p></div>
+          <div className=" inline-flex gap-5">
+            <p>{resMenu?.data?.cards[0]?.card?.card?.info?.sla?.deliveryTime}MINS</p>
             <p>{resMenu?.data?.cards[0]?.card?.card?.info?.costForTwoMessage}</p>
           </div>
-            
+          <br></br>
+        </div>
+        <br></br>
            {/* categories accordian*/}
            {
              categories.map((category) => <RestaurantCategory data={category?.card?.card}/>)
