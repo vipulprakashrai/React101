@@ -1,10 +1,14 @@
 import {LOGO_URL} from "../utils/constants.js";
 import { Link } from "react-router-dom";
 import { useState } from "react";
+import { useSelector } from "react-redux";
+import { selectCart } from "../utils/cartSlice.js";
 
 const Header = () => {
 
 const [loginbtn, setloginbtn] = useState("Login");
+
+const cartItems = useSelector(selectCart);
 
     return(
       <div className="flex justify-between items-center shadow-md mb-2">
@@ -19,7 +23,7 @@ const [loginbtn, setloginbtn] = useState("Login");
           <h1 className="px-4 hover:text-amber-600"><Link to="/about">About</Link></h1>
           <h1 className="px-4 hover:text-amber-600"><Link to={`/contact`}>ContactUs</Link></h1>
           <h1 className="px-4 hover:text-amber-600"><Link to={"/grocery"}>Grocery</Link></h1>
-          <h1 className="px-4 hover:text-amber-600">Cart</h1>
+          <h1 className="px-4 hover:text-amber-600">Cart({cartItems.length})</h1>
           <button className="flex px-4 hover:text-amber-600"
               onClick={() =>{
                   if(loginbtn === "Login"){

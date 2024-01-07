@@ -6,9 +6,11 @@ import Body from "./components/Body.js";
 import About from "./components/About.js";
 import Contact from "./components/Contact.js";
 import Error from "./components/Error.js";
+import { Provider } from "react-redux";
 
 import { Outlet, RouterProvider, createBrowserRouter } from "react-router-dom";
 import RestaurantMenu from "./components/RestaurantMenu.js";
+import appStore from "./utils/appStore.js";
 //import Grocery from "./components/Grocery.js";
 
 //chunking
@@ -20,10 +22,12 @@ const Grocery = lazy(() => import("./components/Grocery.js"));
 
 const App = () => {
   return (
-    <>
-    <Header />
-    <Outlet/>
-    </>
+    <Provider store={appStore}>
+      <>
+        <Header />
+        <Outlet/>
+     </>
+     </Provider>
   );
 };
 
