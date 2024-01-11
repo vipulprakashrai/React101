@@ -2,10 +2,11 @@ import { useDispatch } from "react-redux";
 import { addItem } from "../utils/cartSlice";
 
 const RestaurantItems = ({resItem}) => {
+
   const dispatch = useDispatch();
-  function handleButton(){
+  function handleButton(resItem){
     //dispatch action
-    dispatch(addItem());
+    dispatch(addItem(resItem));
 
   }
 
@@ -18,7 +19,7 @@ const RestaurantItems = ({resItem}) => {
              alt=""
             />
              <button className=" w-20 shadow-xl bg-white text-green-600 size-2" 
-                onClick={handleButton} >ADD</button>
+                onClick={()=>handleButton(resItem)} >ADD</button>
             </div>
            </div>
           

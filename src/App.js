@@ -6,6 +6,7 @@ import Body from "./components/Body.js";
 import About from "./components/About.js";
 import Contact from "./components/Contact.js";
 import Error from "./components/Error.js";
+import Cart from "./components/Cart.js";
 import { Provider } from "react-redux";
 
 import { Outlet, RouterProvider, createBrowserRouter } from "react-router-dom";
@@ -53,6 +54,10 @@ const route = createBrowserRouter([
       {
         path: "/grocery",
         element: <Suspense fallback={<h2>loading grocery data...</h2>}><Grocery/></Suspense>,
+      },
+      {
+        path: "/cart",
+        element: <Cart/>,
       },
       {
         path: "/restaurant/:resId",
