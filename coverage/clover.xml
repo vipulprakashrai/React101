@@ -1,14 +1,49 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1705160792644" clover="3.2.0">
-  <project timestamp="1705160792645" name="All files">
-    <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2" elements="4" coveredelements="4" complexity="0" loc="2" ncloc="2" packages="1" files="2" classes="2"/>
-    <file name="Contact.js" path="C:\Users\DELL\Documents\React\React101\src\components\Contact.js">
-      <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
-      <line num="2" count="4" type="stmt"/>
-    </file>
-    <file name="sum.js" path="C:\Users\DELL\Documents\React\React101\src\components\sum.js">
-      <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
-      <line num="2" count="1" type="stmt"/>
-    </file>
+<coverage generated="1705169162444" clover="3.2.0">
+  <project timestamp="1705169162444" name="All files">
+    <metrics statements="19" coveredstatements="15" conditionals="2" coveredconditionals="1" methods="8" coveredmethods="5" elements="29" coveredelements="21" complexity="0" loc="19" ncloc="19" packages="2" files="6" classes="6"/>
+    <package name="components">
+      <metrics statements="10" coveredstatements="9" conditionals="2" coveredconditionals="1" methods="4" coveredmethods="4"/>
+      <file name="Contact.js" path="C:\Users\DELL\Documents\React\React101\src\components\Contact.js">
+        <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="2" count="4" type="stmt"/>
+      </file>
+      <file name="Header.js" path="C:\Users\DELL\Documents\React\React101\src\components\Header.js">
+        <metrics statements="8" coveredstatements="7" conditionals="2" coveredconditionals="1" methods="2" coveredmethods="2"/>
+        <line num="7" count="1" type="stmt"/>
+        <line num="9" count="3" type="stmt"/>
+        <line num="11" count="3" type="stmt"/>
+        <line num="12" count="3" type="stmt"/>
+        <line num="13" count="3" type="stmt"/>
+        <line num="29" count="1" type="cond" truecount="1" falsecount="1"/>
+        <line num="30" count="1" type="stmt"/>
+        <line num="33" count="0" type="stmt"/>
+      </file>
+      <file name="sum.js" path="C:\Users\DELL\Documents\React\React101\src\components\sum.js">
+        <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="2" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="utils">
+      <metrics statements="9" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="1"/>
+      <file name="appStore.js" path="C:\Users\DELL\Documents\React\React101\src\utils\appStore.js">
+        <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="3" count="1" type="stmt"/>
+      </file>
+      <file name="cartSlice.js" path="C:\Users\DELL\Documents\React\React101\src\utils\cartSlice.js">
+        <metrics statements="6" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="1"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="10" count="0" type="stmt"/>
+        <line num="13" count="0" type="stmt"/>
+        <line num="16" count="0" type="stmt"/>
+        <line num="22" count="1" type="stmt"/>
+        <line num="23" count="4" type="stmt"/>
+      </file>
+      <file name="constants.js" path="C:\Users\DELL\Documents\React\React101\src\utils\constants.js">
+        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="5" count="1" type="stmt"/>
+      </file>
+    </package>
   </project>
 </coverage>
