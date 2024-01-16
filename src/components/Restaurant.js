@@ -2,7 +2,7 @@ import {CDN_URL} from "../utils/constants.js";
 
 const Restaurant = (props) => {
     const {resData} = props
-    
+
     const {cloudinaryImageId,name,avgRating,cuisines,sla} = resData?.info
      //console.log(resData);//Object
      
